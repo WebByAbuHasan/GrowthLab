@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GrowthLab | Digital Marketing Consultant for Growing Businesses</title>
+<meta name="description" content="GrowthLab is a digital marketing consultancy offering SEO, paid ads, social media, email and analytics to help small and mid-sized businesses grow online.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GrowthLab | Digital Marketing Consultant">
+<meta property="og:description" content="SEO, paid ads, social and email strategy built around measurable growth.">
+<meta property="og:image" content="og-image.png"><!-- EDIT: replace with your share image -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237c3aed'/%3E%3Cpath d='M8 21l5-6 4 3 7-9' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"><!-- EDIT: favicon placeholder -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: { fontFamily: { display: ['"Bricolage Grotesque"','system-ui','sans-serif'], sans: ['"DM Sans"','system-ui','sans-serif'] } } } };
+</script>
+<style>
+:root{--bg:#07060f;--card:#0f0d1d;--line:rgba(255,255,255,.09);--v1:#8b5cf6;--v2:#c026d3}
+html,body{background:var(--bg);color:#e6e4f2;overflow-x:hidden}
+body{font-family:'DM Sans',system-ui,sans-serif}
+h1,h2,h3,h4{font-family:'Bricolage Grotesque',system-ui,sans-serif}
+.grad-text{background:linear-gradient(90deg,#a78bfa,#e879f9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad-bg{background:linear-gradient(135deg,var(--v1),var(--v2))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:1.25rem;transition:transform .3s,border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(167,139,250,.5);box-shadow:0 20px 50px -20px rgba(139,92,246,.5)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.75rem 1.5rem;border-radius:999px;font-weight:700;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.97)}
+.btn-p{background:linear-gradient(135deg,var(--v1),var(--v2));color:#fff;box-shadow:0 10px 30px -10px rgba(139,92,246,.8)}
+.btn-p:hover{box-shadow:0 14px 40px -8px rgba(192,38,211,.7)}
+.btn-o{border:1px solid rgba(255,255,255,.2)}.btn-o:hover{background:rgba(255,255,255,.07)}
+.glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;opacity:.45}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.hero-in>*{opacity:0;animation:up .8s ease forwards}
+.hero-in>*:nth-child(2){animation-delay:.1s}.hero-in>*:nth-child(3){animation-delay:.2s}.hero-in>*:nth-child(4){animation-delay:.3s}.hero-in>*:nth-child(5){animation-delay:.4s}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.float{animation:float 6s ease-in-out infinite}.float2{animation:float 8s ease-in-out infinite reverse}
+.imgwrap{overflow:hidden}.imgwrap img{transition:transform .6s;width:100%;height:100%;object-fit:cover}
+.card:hover .imgwrap img,.imgwrap:hover img{transform:scale(1.06)}
+#menu{max-height:0;overflow:hidden;transition:max-height .35s ease}#menu.open{max-height:440px}
+#modal{opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}#modal.open{opacity:1;visibility:visible}
+#modal .panel{transform:translateY(20px) scale(.97);transition:transform .3s}#modal.open .panel{transform:none}
+.field{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:.9rem;padding:.85rem 1rem;color:#fff;min-height:48px}
+.field:focus{outline:2px solid var(--v1);outline-offset:1px}
+.nav-a{position:relative;transition:color .2s;color:#b9b6d0}.nav-a:hover,.nav-a.active{color:#fff}
+.nav-a.active::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:linear-gradient(90deg,var(--v1),var(--v2));border-radius:2px}
+.chip{padding:.55rem 1.1rem;border-radius:999px;border:1px solid var(--line);font-weight:500;min-height:44px;transition:all .2s}
+.chip.on{background:linear-gradient(135deg,var(--v1),var(--v2));border-color:transparent;color:#fff}
+:focus-visible{outline:2px solid #c4b5fd;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.hero-in>*{opacity:1;transform:none}}
+</style>
+</head>
+<body class="antialiased">
+
+<header class="fixed top-0 inset-x-0 z-40 backdrop-blur-xl bg-[#07060f]/75 border-b border-white/10">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between" aria-label="Main">
+    <a href="#home" class="font-display text-xl font-extrabold flex items-center gap-2">
+      <span class="grad-bg w-8 h-8 rounded-lg grid place-items-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l5-6 4 3 7-9"/></svg></span>GrowthLab
+    </a>
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium" id="navlinks">
+      <li><a class="nav-a" href="#home">Home</a></li><li><a class="nav-a" href="#about">About</a></li>
+      <li><a class="nav-a" href="#services">Services</a></li><li><a class="nav-a" href="#portfolio">Portfolio</a></li><li><a class="nav-a" href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-p hidden md:inline-flex !min-h-[42px] !py-2 text-sm">Let's Talk</a>
+    <button id="burger" class="md:hidden w-11 h-11 grid place-items-center rounded-xl border border-white/15" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </nav>
+  <div id="menu" class="md:hidden bg-[#0b0919] border-t border-white/10">
+    <ul class="px-5 py-4 flex flex-col gap-1 text-lg font-medium">
+      <li><a class="block py-3" href="#home">Home</a></li><li><a class="block py-3" href="#about">About</a></li>
+      <li><a class="block py-3" href="#services">Services</a></li><li><a class="block py-3" href="#portfolio">Portfolio</a></li><li><a class="block py-3" href="#contact">Contact</a></li>
+      <li><a class="btn btn-p w-full mt-2" href="#contact">Let's Talk</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="home" class="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+  <div class="glow w-72 h-72 bg-violet-600 -top-10 -left-20 float"></div>
+  <div class="glow w-80 h-80 bg-fuchsia-700 bottom-0 right-0 float2"></div>
+  <div class="relative max-w-6xl mx-auto px-5 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="hero-in">
+      <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-violet-400/30 bg-violet-500/10 text-sm text-violet-200"><span class="w-2 h-2 rounded-full bg-emerald-400"></span>Digital Marketing Consultant</span>
+      <p class="mt-6 text-violet-300 font-medium" data-edit>Alex Morgan, founder of GrowthLab</p>
+      <h1 class="mt-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05]">Marketing that turns clicks into <span class="grad-text">paying customers</span></h1>
+      <p class="mt-6 text-lg text-slate-300 max-w-xl">I help small and mid-sized businesses find the channels that actually pay back, then run them with clear reporting. You get a plan, a single point of contact and numbers you can read.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#portfolio" class="btn btn-p">View My Work</a>
+        <a href="#contact" class="btn btn-o">Let's Talk</a>
+      </div>
+    </div>
+    <div class="relative max-w-md w-full mx-auto lg:ml-auto">
+      <div class="absolute -inset-3 rounded-[2rem] grad-bg opacity-30 blur-2xl"></div>
+      <div class="imgwrap relative rounded-[2rem] border border-white/10 aspect-[4/5]"><img id="heroImg" alt="Portrait placeholder of Alex Morgan, digital marketing consultant" width="480" height="600"></div>
+      <div class="float absolute -left-4 sm:-left-8 bottom-10 card !rounded-2xl px-4 py-3 text-sm backdrop-blur"><b class="block text-white">Growth dashboard</b><span class="text-slate-400">Sample visual</span></div>
+      <div class="float2 absolute -right-2 sm:-right-6 top-8 grad-bg rounded-2xl px-4 py-3 text-sm font-bold shadow-xl">SEO · Ads · Email</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="max-w-6xl mx-auto px-5 -mt-4">
+  <div id="stats" class="grid grid-cols-2 lg:grid-cols-4 gap-4 reveal"></div>
+  <p class="text-xs text-slate-500 mt-3">Sample values for layout only. Edit them in the STATS array before publishing.</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="max-w-6xl mx-auto px-5 py-24 grid md:grid-cols-2 gap-12 items-center">
+  <div class="relative reveal">
+    <div class="glow w-56 h-56 bg-violet-600 -bottom-10 -left-10"></div>
+    <div class="imgwrap relative rounded-3xl border border-white/10 aspect-square"><img id="aboutImg" alt="Alex Morgan working at a desk (placeholder)" width="560" height="560" loading="lazy"></div>
+  </div>
+  <div class="reveal">
+    <span class="px-4 py-1.5 rounded-full border border-white/15 text-sm text-violet-200">About</span>
+    <h2 class="mt-5 text-3xl sm:text-4xl font-extrabold leading-tight">Strategy first, then the tools</h2>
+    <p class="mt-5 text-slate-300">GrowthLab is a one-person consultancy focused on practical growth. I start with your goals and your numbers, pick the two or three channels most likely to work, and test them before scaling spend.</p>
+    <p class="mt-4 text-slate-400">This biography is sample text. Replace it with your own story, background and approach.</p>
+    <ul id="skills" class="mt-6 flex flex-wrap gap-2"></ul>
+    <a href="#contact" class="btn btn-p mt-8">Work With Me</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="relative py-24 bg-white/[.02] border-y border-white/5">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="max-w-2xl reveal">
+      <span class="px-4 py-1.5 rounded-full border border-white/15 text-sm text-violet-200">Services</span>
+      <h2 class="mt-5 text-3xl sm:text-4xl font-extrabold">Pick one service or build a full growth plan</h2>
+      <p class="mt-3 text-slate-400">Prices are sample starting points. Edit them in the SERVICES array.</p>
+    </div>
+    <div id="serviceGrid" class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="max-w-6xl mx-auto px-5 py-24">
+  <div class="max-w-2xl reveal">
+    <span class="px-4 py-1.5 rounded-full border border-white/15 text-sm text-violet-200">Portfolio</span>
+    <h2 class="mt-5 text-3xl sm:text-4xl font-extrabold">Sample projects to replace with your own</h2>
+    <p class="mt-3 text-slate-400">These are illustrative placeholders, not real client work.</p>
+  </div>
+  <div id="filters" class="mt-8 flex gap-2 overflow-x-auto pb-2" role="tablist" aria-label="Project categories"></div>
+  <div id="projectGrid" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="py-24 bg-white/[.02] border-y border-white/5">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl sm:text-4xl font-extrabold max-w-xl reveal">What clients could say about working together</h2>
+    <p class="mt-3 text-slate-400">Sample placeholder testimonials. Replace with real, permissioned quotes.</p>
+    <div id="testimonialGrid" class="mt-10 grid md:grid-cols-3 gap-5"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="relative max-w-6xl mx-auto px-5 py-24">
+  <div class="glow w-72 h-72 bg-violet-700 top-10 right-0"></div>
+  <div class="relative card !rounded-[2rem] p-6 sm:p-10 grid lg:grid-cols-2 gap-10 reveal" style="transform:none">
+    <div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold leading-tight">Let's Work <span class="grad-text">Together</span></h2>
+      <p class="mt-4 text-slate-300 max-w-md">Tell me about your business and what you want to grow. I'll reply with next steps and an honest view on whether I'm the right fit.</p>
+      <ul class="mt-8 space-y-4" id="contactInfo"></ul>
+      <div id="socials" class="mt-8 flex gap-3"></div>
+    </div>
+    <form id="form" novalidate class="space-y-4" aria-label="Contact form">
+      <div><label for="name" class="text-sm text-slate-300">Name</label><input id="name" class="field mt-1" autocomplete="name" placeholder="Your name"><p class="err text-sm text-rose-400 mt-1 hidden"></p></div>
+      <div><label for="email" class="text-sm text-slate-300">Email</label><input id="email" type="email" class="field mt-1" autocomplete="email" placeholder="you@company.com"><p class="err text-sm text-rose-400 mt-1 hidden"></p></div>
+      <div><label for="message" class="text-sm text-slate-300">Message</label><textarea id="message" rows="5" class="field mt-1" placeholder="What are you looking to achieve?"></textarea><p class="err text-sm text-rose-400 mt-1 hidden"></p></div>
+      <button class="btn btn-p w-full" type="submit">Send Message</button>
+      <div id="success" class="hidden rounded-2xl border border-emerald-400/30 bg-emerald-500/10 p-4 text-sm" role="status"></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="border-t border-white/10 pt-14 pb-8">
+  <div class="max-w-6xl mx-auto px-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div class="lg:col-span-2"><p class="font-display text-2xl font-extrabold">GrowthLab</p><p class="mt-3 text-slate-400 max-w-sm">Practical digital marketing for businesses that want measurable growth.</p><div id="fSocials" class="mt-5 flex gap-3"></div></div>
+    <div><h3 class="font-bold mb-3">Quick links</h3><ul class="space-y-2 text-slate-400"><li><a class="hover:text-white" href="#home">Home</a></li><li><a class="hover:text-white" href="#about">About</a></li><li><a class="hover:text-white" href="#portfolio">Portfolio</a></li><li><a class="hover:text-white" href="#contact">Contact</a></li></ul></div>
+    <div><h3 class="font-bold mb-3">Services</h3><ul id="fServices" class="space-y-2 text-slate-400"></ul></div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-3 justify-between text-sm text-slate-500">
+    <p>&copy; <span id="year"></span> GrowthLab. All rights reserved.</p>
+    <p class="flex gap-5"><button class="hover:text-white py-2" data-info="privacy">Privacy Policy</button><button class="hover:text-white py-2" data-info="terms">Terms</button></p>
+  </div>
+</footer>
+
+<button id="toTop" class="fixed bottom-5 right-5 z-30 w-12 h-12 rounded-full grad-bg grid place-items-center shadow-lg opacity-0 pointer-events-none transition-opacity" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg>
+</button>
+
+<div id="modal" class="fixed inset-0 z-50 grid place-items-center p-4 bg-black/75 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="panel card !rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative" style="transform:none">
+    <button id="mClose" class="absolute top-3 right-3 w-11 h-11 rounded-full bg-black/60 grid place-items-center z-10" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div id="mBody"></div>
+  </div>
+</div>
+
+<script>
+/* ========= EDIT ME: site configuration & sample content ========= */
+const CONFIG = {
+  email: "hello@example.com",          // EDIT: your real email (the contact form opens this address in the visitor's email app)
+  phone: "+1 (555) 010-0123",          // EDIT
+  location: "Remote, worldwide",       // EDIT
+  heroImage: "",                       // EDIT: e.g. "images/alex.jpg" (blank = built-in placeholder)
+  aboutImage: "",                      // EDIT
+  socials: [
+    { name: "LinkedIn", url: "https://www.linkedin.com/", d: "M4 4h4v4H4zM4 10h4v10H4zM10 10h4v2c1-2 6-3 6 2v6h-4v-5c0-2-2-2-2 0v5h-4z" },
+    { name: "Instagram", url: "https://www.instagram.com/", d: "M7 3h10a4 4 0 014 4v10a4 4 0 01-4 4H7a4 4 0 01-4-4V7a4 4 0 014-4zm5 5a4 4 0 100 8 4 4 0 000-8zm5.5-2v.01" },
+    { name: "X", url: "https://x.com/", d: "M4 4l16 16M20 4L4 20" }
+  ]
+};
+const STATS = [ // EDIT: sample numbers
+  { v: 120, s: "+", l: "Projects Completed" }, { v: 85, s: "+", l: "Happy Clients" },
+  { v: 4.9, s: "/5", l: "Client Rating" }, { v: 8, s: "+", l: "Years Experience" }
+];
+const SKILLS = ["SEO","Google Ads","Meta Ads","Email Marketing","Analytics","Content Strategy","CRO"];
+const ICON = {
+  search: '<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>',
+  target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+  share: '<circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/>',
+  mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+  chart: '<path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/>',
+  pen: '<path d="M4 20l1-5L16 4l4 4L9 19z"/>',
+  pin: '<path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+  phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/>'
+};
+const svg = (k, c = "w-6 h-6") => `<svg class="${c}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[k]}</svg>`;
+const SERVICES = [ // EDIT: names, text, prices
+  { icon: "search", name: "SEO & Content", price: "from $600/mo", text: "Technical fixes, keyword strategy and content that earns steady organic traffic." },
+  { icon: "target", name: "Paid Advertising", price: "from $500/mo", text: "Google and Meta campaigns built around cost per customer, not clicks." },
+  { icon: "share", name: "Social Media Strategy", price: "from $450/mo", text: "A posting plan, creative direction and community routines your team can keep up." },
+  { icon: "mail", name: "Email & Automation", price: "from $400/mo", text: "Welcome flows, abandoned-cart and win-back sequences that bring customers back." },
+  { icon: "chart", name: "Analytics & Reporting", price: "from $350", text: "Clean tracking setup and a monthly dashboard that shows what is working." },
+  { icon: "pen", name: "Marketing Audit", price: "from $300", text: "A one-off review of your channels with a prioritised, plain-English action list." }
+];
+const CATS = ["All","SEO","Paid Ads","Social","Email"];
+const PROJECTS = [ // EDIT: replace img with a file path, e.g. "images/project1.jpg"
+  { t: "Organic Growth Plan", c: "SEO", h: 265, img: "", d: "Sample project: site audit, keyword map and a six-month content calendar.", del: ["Technical SEO audit","Keyword strategy","Content calendar"] },
+  { t: "Lead Generation Campaign", c: "Paid Ads", h: 300, img: "", d: "Sample project: search and social campaigns with landing page recommendations.", del: ["Campaign structure","Ad creative briefs","Conversion tracking"] },
+  { t: "Brand Social Refresh", c: "Social", h: 320, img: "", d: "Sample project: new content pillars and a repeatable weekly posting system.", del: ["Content pillars","Posting schedule","Template pack"] },
+  { t: "Welcome Email Series", c: "Email", h: 280, img: "", d: "Sample project: a five-email onboarding flow with segmentation rules.", del: ["Flow map","Email copy","A/B test plan"] },
+  { t: "Local Search Visibility", c: "SEO", h: 245, img: "", d: "Sample project: Google Business Profile cleanup and local citation plan.", del: ["Profile optimisation","Citation list","Review strategy"] },
+  { t: "Retargeting Funnel", c: "Paid Ads", h: 285, img: "", d: "Sample project: a three-stage retargeting setup for returning visitors.", del: ["Audience setup","Ad sets","Monthly report"] }
+];
+const TESTIMONIALS = [ // EDIT: sample placeholders, not real customers
+  { n: "Sample Client A", r: "Owner, Example Store", q: "Placeholder: Replace this with a real quote about the clarity of the strategy and reporting.", s: 5 },
+  { n: "Sample Client B", r: "Marketing Lead, Example Co.", q: "Placeholder: Replace this with feedback about communication and how projects were delivered.", s: 5 },
+  { n: "Sample Client C", r: "Founder, Example Studio", q: "Placeholder: Replace this with a real comment on the results or working process.", s: 5 }
+];
+const INFO = {
+  privacy: ["Privacy Policy", "Sample text: replace this with your own privacy policy. This site has no backend and stores no visitor data."],
+  terms: ["Terms", "Sample text: replace this with your own terms of service."]
+};
+
+/* ========= helpers ========= */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"']/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m]));
+const star = '<svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.8L18.2 22 12 18.3 5.8 22l1.5-7.6L2 9.6 9 9z"/></svg>';
+const placeholder = (h, label) => "data:image/svg+xml," + encodeURIComponent(
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(${h},70%,28%)"/><stop offset="1" stop-color="hsl(${h + 50},75%,14%)"/></linearGradient></defs><rect width="400" height="300" fill="url(#g)"/><circle cx="310" cy="70" r="90" fill="hsl(${h},90%,60%)" opacity=".18"/><path d="M40 230l70-70 50 40 90-110 90 80v60H40z" fill="hsl(${h},80%,65%)" opacity=".25"/><text x="24" y="40" fill="#fff" opacity=".7" font-family="sans-serif" font-size="16">${label}</text></svg>`);
+const avatar = (n, i) => "data:image/svg+xml," + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" fill="hsl(${260 + i * 30},60%,45%)"/><text x="24" y="31" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="20" font-weight="700">${n.slice(-1)}</text></svg>`);
+const socialLinks = (c = "") => CONFIG.socials.map(s => `<a href="${s.url}" target="_blank" rel="noopener noreferrer" aria-label="${s.name}" class="w-11 h-11 rounded-full border border-white/15 grid place-items-center hover:bg-white/10 hover:-translate-y-0.5 transition ${c}"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="${s.d}"/></svg></a>`).join("");
+
+/* ========= render ========= */
+$("#heroImg").src = CONFIG.heroImage || placeholder(270, "Your photo here");
+$("#aboutImg").src = CONFIG.aboutImage || placeholder(290, "About photo");
+$("#year").textContent = new Date().getFullYear();
+$("#stats").innerHTML = STATS.map(s => `<div class="card p-6 text-center"><p class="font-display text-4xl font-extrabold grad-text"><span data-count="${s.v}">0</span>${s.s}</p><p class="mt-1 text-sm text-slate-400">${s.l}</p></div>`).join("");
+$("#skills").innerHTML = SKILLS.map(s => `<li class="px-3 py-1.5 rounded-full bg-violet-500/10 border border-violet-400/25 text-sm text-violet-100">${s}</li>`).join("");
+$("#serviceGrid").innerHTML = SERVICES.map(s => `<article class="card p-6 reveal"><div class="w-12 h-12 rounded-xl grad-bg grid place-items-center">${svg(s.icon)}</div><h3 class="mt-5 text-xl font-bold">${s.name}</h3><p class="mt-2 text-slate-400">${s.text}</p><p class="mt-4 text-sm text-violet-300 font-medium">${s.price}</p><a href="#contact" class="mt-4 inline-flex items-center gap-1 font-bold text-violet-200 hover:text-white min-h-[44px]">Get a quote</a></article>`).join("");
+$("#fServices").innerHTML = SERVICES.map(s => `<li><a class="hover:text-white" href="#services">${s.name}</a></li>`).join("");
+$("#testimonialGrid").innerHTML = TESTIMONIALS.map((t, i) => `<figure class="card p-6 reveal"><div class="flex gap-0.5" aria-label="${t.s} out of 5 stars">${star.repeat(t.s)}</div><blockquote class="mt-4 text-slate-300">${t.q}</blockquote><figcaption class="mt-6 flex items-center gap-3"><img class="w-11 h-11 rounded-full" src="${avatar(t.n, i)}" alt="Avatar placeholder for ${t.n}" width="44" height="44" loading="lazy"><div><b class="block">${t.n}</b><span class="text-sm text-slate-400">${t.r}</span></div></figcaption></figure>`).join("");
+$("#contactInfo").innerHTML = [["mail", "Email", CONFIG.email, "mailto:" + CONFIG.email], ["phone", "Phone", CONFIG.phone, "tel:" + CONFIG.phone.replace(/[^+\d]/g, "")], ["pin", "Location", CONFIG.location, ""]]
+  .map(([i, l, v, h]) => `<li class="flex items-center gap-4"><span class="w-11 h-11 rounded-xl bg-violet-500/15 text-violet-300 grid place-items-center">${svg(i, "w-5 h-5")}</span><span><span class="block text-xs text-slate-400">${l}</span>${h ? `<a class="font-medium hover:text-violet-300" href="${h}">${esc(v)}</a>` : `<span class="font-medium">${esc(v)}</span>`}</span></li>`).join("");
+$("#socials").innerHTML = socialLinks(); $("#fSocials").innerHTML = socialLinks();
+
+/* portfolio */
+const imgOf = (p, i) => p.img || placeholder(p.h, p.c);
+function renderProjects(cat = "All") {
+  $("#projectGrid").innerHTML = PROJECTS.map((p, i) => ({ p, i })).filter(({ p }) => cat === "All" || p.c === cat).map(({ p, i }) =>
+    `<article class="card overflow-hidden"><button class="block w-full text-left" data-project="${i}" aria-label="View project: ${esc(p.t)}"><div class="imgwrap aspect-[4/3]"><img src="${imgOf(p)}" alt="${esc(p.t)} cover (placeholder)" width="400" height="300" loading="lazy"></div><div class="p-5"><span class="text-xs text-violet-300 font-medium">${p.c}</span><h3 class="mt-1 text-lg font-bold">${p.t}</h3><p class="mt-2 text-sm text-slate-400">${p.d}</p><span class="mt-4 inline-flex items-center min-h-[44px] font-bold text-violet-200">View Project</span></div></button></article>`).join("");
+}
+$("#filters").innerHTML = CATS.map((c, i) => `<button class="chip shrink-0 ${i ? "" : "on"}" role="tab" aria-selected="${i === 0}" data-cat="${c}">${c}</button>`).join("");
+$("#filters").addEventListener("click", e => {
+  const b = e.target.closest("[data-cat]"); if (!b) return;
+  $$(".chip").forEach(c => { c.classList.toggle("on", c === b); c.setAttribute("aria-selected", c === b); });
+  renderProjects(b.dataset.cat);
+});
+renderProjects();
+
+/* modal */
+const modal = $("#modal"); let lastFocus = null;
+function openModal(html) { lastFocus = document.activeElement; $("#mBody").innerHTML = html; modal.classList.add("open"); document.body.style.overflow = "hidden"; $("#mClose").focus(); }
+function closeModal() { modal.classList.remove("open"); document.body.style.overflow = ""; lastFocus && lastFocus.focus(); }
+$("#projectGrid").addEventListener("click", e => {
+  const b = e.target.closest("[data-project]"); if (!b) return;
+  const p = PROJECTS[b.dataset.project];
+  openModal(`<img src="${imgOf(p)}" alt="${esc(p.t)} large preview (placeholder)" class="w-full aspect-[16/10] object-cover" width="800" height="500"><div class="p-6 sm:p-8"><span class="text-sm text-violet-300 font-medium">${p.c}</span><h3 id="mTitle" class="mt-1 text-2xl font-extrabold">${p.t}</h3><p class="mt-3 text-slate-300">${p.d}</p><h4 class="mt-6 font-bold">Deliverables</h4><ul class="mt-2 space-y-2 text-slate-300">${p.del.map(d => `<li class="flex gap-2"><span class="text-violet-400">&#10003;</span>${d}</li>`).join("")}</ul><a href="#contact" data-close class="btn btn-p mt-8">Start a similar project</a></div>`);
+});
+document.addEventListener("click", e => {
+  const i = e.target.closest("[data-info]");
+  if (i) { const [t, x] = INFO[i.dataset.info]; openModal(`<div class="p-8"><h3 id="mTitle" class="text-2xl font-extrabold">${t}</h3><p class="mt-4 text-slate-300">${x}</p></div>`); }
+  if (e.target === modal || e.target.closest("#mClose") || e.target.closest("[data-close]")) closeModal();
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+
+/* mobile menu */
+const burger = $("#burger"), menu = $("#menu");
+const setMenu = o => { menu.classList.toggle("open", o); burger.setAttribute("aria-expanded", o); };
+burger.addEventListener("click", () => setMenu(!menu.classList.contains("open")));
+$$("#menu a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+
+/* form (frontend only: no data is sent to a server) */
+$("#form").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = { name: $("#name"), email: $("#email"), message: $("#message") };
+  const rules = {
+    name: v => v.trim().length < 2 && "Enter your name.",
+    email: v => !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) && "Enter a valid email address.",
+    message: v => v.trim().length < 10 && "Write at least 10 characters."
+  };
+  let ok = true;
+  Object.keys(f).forEach(k => {
+    const msg = rules[k](f[k].value), er = f[k].parentElement.querySelector(".err");
+    er.textContent = msg || ""; er.classList.toggle("hidden", !msg); f[k].setAttribute("aria-invalid", !!msg);
+    if (msg) ok = false;
+  });
+  if (!ok) return;
+  const href = `mailto:${CONFIG.email}?subject=${encodeURIComponent("Enquiry from " + f.name.value.trim())}&body=${encodeURIComponent(f.message.value.trim() + "\n\n" + f.name.value.trim() + " (" + f.email.value.trim() + ")")}`;
+  const s = $("#success");
+  s.innerHTML = `<b>Thanks, ${esc(f.name.value.trim())}. Your message is ready.</b><br>This site has no server, so nothing has been sent yet. <a class="underline font-bold" href="${href}">Open it in your email app</a> to send it.`;
+  s.classList.remove("hidden"); $("#form").reset();
+});
+
+/* reveal, counters, active nav, back to top */
+const countUp = el => {
+  const end = parseFloat(el.dataset.count), dec = end % 1 ? 1 : 0; let t0 = null;
+  const step = t => { t0 ??= t; const p = Math.min((t - t0) / 1200, 1); el.textContent = (end * p).toFixed(dec); if (p < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+};
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); $$("[data-count]", en.target).forEach(countUp); io.unobserve(en.target); } }), { threshold: .15 });
+  $$(".reveal").forEach(el => io.observe(el));
+  const links = $$("#navlinks a"), secs = links.map(a => $(a.getAttribute("href")));
+  const nav = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) links.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id)); }), { rootMargin: "-45% 0px -50% 0px" });
+  secs.forEach(s => s && nav.observe(s));
+} else { $$(".reveal").forEach(el => el.classList.add("in")); $$("[data-count]").forEach(el => el.textContent = el.dataset.count); }
+const toTop = $("#toTop");
+addEventListener("scroll", () => { const on = scrollY > 600; toTop.style.opacity = on ? 1 : 0; toTop.style.pointerEvents = on ? "auto" : "none"; }, { passive: true });
+toTop.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
+</script>
+</body>
+</html>
